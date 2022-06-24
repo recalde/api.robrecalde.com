@@ -2,7 +2,7 @@ using System.Text.Json;
 using Amazon;
 using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.DataModel;
-using recalde-api.Repositories;
+using recalde.api.Repositories;
 
 
 var builder = WebApplication.CreateBuilder(args);

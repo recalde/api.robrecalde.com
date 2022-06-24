@@ -1,5 +1,5 @@
-﻿using recalde-api.Entities;
-using recalde-api.Repositories;
+﻿using recalde.api.Entities;
+using recalde.api.Repositories;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Net.Http.Json;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace recalde-api.Tests
+namespace recalde.api.Tests
 {
     public class BookControllerTest
     {

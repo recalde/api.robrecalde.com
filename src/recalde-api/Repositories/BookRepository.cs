@@ -1,8 +1,8 @@
 ﻿using Amazon.DynamoDBv2.DataModel;
 using Amazon.DynamoDBv2.DocumentModel;
-using recalde-api.Entities;
+using recalde.api.Entities;
 
-namespace recalde-api.Repositories
+namespace recalde.api.Repositories
 {
 
 

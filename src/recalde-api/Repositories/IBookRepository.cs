@@ -1,6 +1,6 @@
-﻿using recalde-api.Entities;
+﻿using recalde.api.Entities;
 
-namespace recalde-api.Repositories
+namespace recalde.api.Repositories
 {
     /// <summary>
     /// Sample DynamoDB Table book CRUD

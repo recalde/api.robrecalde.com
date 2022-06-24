@@ -1,12 +1,12 @@
 ﻿using Bogus;
-using recalde-api.Entities;
-using recalde-api.Repositories;
+using recalde.api.Entities;
+using recalde.api.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace recalde-api.Tests
+namespace recalde.api.Tests
 {
     internal class MockBookRepository : IBookRepository
     {

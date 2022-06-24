@@ -1,6 +1,6 @@
 using Amazon.DynamoDBv2.DataModel;
 
-namespace recalde-api.Entities;
+namespace recalde.api.Entities;
 
 // <summary>
 /// Map the Book Class to DynamoDb Table

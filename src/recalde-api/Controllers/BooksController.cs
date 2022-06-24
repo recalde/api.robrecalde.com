@@ -1,9 +1,9 @@
 using Amazon.DynamoDBv2.DataModel;
 using Microsoft.AspNetCore.Mvc;
-using recalde-api.Entities;
-using recalde-api.Repositories;
+using recalde.api.Entities;
+using recalde.api.Repositories;
 
-namespace recalde-api.Controllers;
+namespace recalde.api.Controllers;
 
 [Route("api/[controller]")]
 [Produces("application/json")]

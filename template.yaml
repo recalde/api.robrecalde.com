@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  Sample SAM Template for recalde-api
+  Serverless lambda function for recalde-api
 
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
@@ -9,21 +9,21 @@ Globals:
     Timeout: 100
 
 Resources:
-  NetCodeWebAPIServerless:
+  RecaldeApiFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      Description: A simple example includes a .NET Core WebAPI App with DynamoDB table.
+      Description: Serverless function definition for api.robrecalde.com.
       CodeUri: ./src/recalde-api/
       Handler: recalde-api
       Runtime: dotnet6
       MemorySize: 1024
       Environment: # More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
         Variables:
-          SAMPLE_TABLE: !Ref SampleTable
+          SAMPLE_TABLE: SampleTable
       Policies:
         # Give Create/Read/Update/Delete Permissions to the SampleTable
         - DynamoDBCrudPolicy:
-            TableName: !Ref SampleTable
+            TableName: SampleTable
       Events:
         ProxyResource:
           Type: HttpApi
@@ -53,4 +53,4 @@ Resources:
 Outputs:
   WebEndpoint:
     Description: "API Gateway endpoint URL"
-    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/"
+    Value: !Sub "https://recalde-api.execute-api.us-east-1.amazonaws.com/"
